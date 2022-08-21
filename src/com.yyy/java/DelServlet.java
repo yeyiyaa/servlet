@@ -40,11 +40,12 @@ public class DelServlet extends HttpServlet {
         }
         //转发
         if(count==1){
-            request.getRequestDispatcher("/list").forward(request,response);
-//            response.sendRedirect(request.getContextPath() + "/list");
+//            request.getRequestDispatcher("/list").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/list");
         }else {
             //删除失败
-            request.getRequestDispatcher("/error.html").forward(request,response);
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect("/error.html");
         }
 
     }

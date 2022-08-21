@@ -32,9 +32,10 @@ public class ModifyServlet extends HttpServlet {
             DBUtil.close(conn,ps,null);
         }
         if (count==1) {
-            request.getRequestDispatcher("/list").forward(request,response);
+//            request.getRequestDispatcher("/list").forward(request,response);
+            response.sendRedirect("/list");
         }else {
-            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect("/error.html");
         }
 
     }

@@ -11,7 +11,6 @@ import java.util.Set;
 public class RequestTestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         Map<String, String[]> map = request.getParameterMap();
         Set<String> keyS = map.keySet();
         Iterator<String> iterator = keyS.iterator();

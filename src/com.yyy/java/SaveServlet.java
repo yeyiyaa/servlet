@@ -50,11 +50,12 @@ public class SaveServlet extends HttpServlet {
             DBUtil.close(conn,ps,rs);
         }
         if(count==1&&flag==0){
-            request.getRequestDispatcher("/list").forward(request,response);
+//            request.getRequestDispatcher("/list").forward(request,response);
+            response.sendRedirect("/list");
         }
 //        &&flag!=0
         if(count==0){
-            request.getRequestDispatcher("error.html").forward(request,response);
+            response.sendRedirect(contextPath+"error.html");
         }
 
     }
